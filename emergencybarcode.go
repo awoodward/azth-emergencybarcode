@@ -43,11 +43,12 @@ func writeCar(car int, pages int, templateFile string, pdf *gofpdf.Fpdf,
 				barcodeData := fmt.Sprintf("%v-EM-%v", car, count)
 				barcode.Barcode(
 					pdf,
-					barcode.RegisterCode128(pdf, barcodeData),
+					//barcode.RegisterCode128(pdf, barcodeData),
+					barcode.RegisterCode39(pdf, barcodeData, false, false),
 					15,
 					202,
-					35,
-					8,
+					40,
+					7,
 					false,
 				)
 			}
