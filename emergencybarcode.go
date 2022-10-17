@@ -76,7 +76,7 @@ func writeCar(car int, pages int, templateFile string, pdf *gofpdf.Fpdf,
 				}
 				// Create a string of random characters
 				noiseStr := ""
-				for i := 0; i < 96; i++ {
+				for i := 0; i < 67; i++ {
 					ascii := rand.Intn(90-48) + 48
 					noiseStr = noiseStr + string(ascii)
 				}
